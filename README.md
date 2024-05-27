@@ -1,2 +1,2 @@
 # RemoteJob
- Shows Latest Remote Jobs across the globe
+ Shows Latest Jobs across the globe
