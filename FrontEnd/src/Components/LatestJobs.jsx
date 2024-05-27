@@ -7,10 +7,16 @@ function LatestJobs(){
     let countries = {'IND':'in','USA':'us','UK':'gb',"AUSTRIA":'at',"AUSTRALIA":'au',"BELGIUM":'be',"BRAZIL":'br',"SWITZERLAND":'ch',"CANADA":'ca',"GERMANY":"de","SPAIN":'es',"FRANCE":"fr",
         "ITALY":"it","MEXICO":'mz',"NETHERLANDS":'nl',"NEWZELAND":'nz',"POLAND":"pl","SINGAPORE":"sg","SOUTH-AFRICA":"za"
     }
+    let categories = ['accounting-finance-jobs', 'it-jobs', 'sales-jobs', 'customer-services-jobs', 'engineering-jobs',
+     'hr-jobs', 'healthcare-nursing-jobs', 'hospitality-catering-jobs', 'pr-advertising-marketing-jobs', 
+     'logistics-warehouse-jobs', 'teaching-jobs', 'trade-construction-jobs', 'admin-jobs', 'legal-jobs', 
+     'creative-design-jobs', 'graduate-jobs', 'retail-jobs', 'consultancy-jobs', 'manufacturing-jobs', 
+     'scientific-qa-jobs', 'social-work-jobs', 'travel-jobs', 'energy-oil-gas-jobs', 'property-jobs', 
+     'charity-voluntary-jobs', 'domestic-help-cleaning-jobs', 'maintenance-jobs', 'part-time-jobs', 'other-general-jobs', 'unknown']
 
     let [country,setCountry] = useState(countries["IND"])
     let [category,setCategory]= useState("it-jobs")
-    let [categories,setCategories]=useState([])
+    // let [categories,setCategories]=useState([])
     let [jobTitle,setJobTitle]=useState("software")
     let [jobLocation,setJoblocation]=useState("Pune")
 
@@ -41,20 +47,20 @@ function LatestJobs(){
     }
 
 
-    useEffect(() => {
-        axios.get("https://api.adzuna.com/v1/api/jobs/gb/categories?app_id=411f39fa&app_key=6f586f71576754e298bf9c5347d9716d")
-            .then((response) => {
+    // useEffect(() => {
+    //     axios.get("https://api.adzuna.com/v1/api/jobs/gb/categories?app_id=411f39fa&app_key=6f586f71576754e298bf9c5347d9716d")
+    //         .then((response) => {
 
-                const data = response.data;
-                const newCategories = data.results.map((item) => item.tag);
-                setCategories(newCategories);
+    //             const data = response.data;
+    //             const newCategories = data.results.map((item) => item.tag);
+    //             setCategories(newCategories);
                     
 
-            })
-            .catch((error) => {
-                console.error('There was a problem with the fetch operation:', error);
-            });
-    }, []);
+    //         })
+    //         .catch((error) => {
+    //             console.error('There was a problem with the fetch operation:', error);
+    //         });
+    // }, []);
 
 
     return(

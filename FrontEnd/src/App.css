@@ -145,3 +145,61 @@ input:focus {
     font-weight: bolder;
     font-size: larger;
 }
+.check{
+    display: flex;
+    flex-direction: column;
+    /* gap: 2vw; */
+    /* gap: 7px; */
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    height: 70vh;
+    /* border: 2px solid black; */
+    /* overflow: scroll; */
+    /* overflow-y: scroll;\ */
+    overflow: initial;
+}
+
+.job-outer-div{
+    display: flex;
+    /* border-bottom: 200px; */
+    border: 2px solid black;
+    justify-content: space-between;
+    align-items: center;
+    width: 78vw;
+    height: 7vh;
+    /* border-radius: 50px; */
+}
+
+/* .job-display{
+    justify-content: center;
+    align-items: center;
+    
+} */
+.ApplyLink{
+    width: 5vw;
+    height: 5vh;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #4A90E2;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    /* margin-left: 50px */
+}
+.jobTitle{
+    text-align: start;
+}
+.companyName{
+    text-align: center;
+}
+.table{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 78vw;
+    height: 2vh;
+}
+.No-jobs{
+    text-align: center;
+}
